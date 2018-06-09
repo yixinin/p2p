@@ -20,7 +20,7 @@ while True:
     dic['host'] = _host
     dic['port'] = _port
     dic['id'] = data
-    print("host: "+host +"port: " +str(port) + "id: " + data)
+    print("host: "+_host +"port: " +str(_port) + "id: " + data)
     if not hosts.__contains__(dic):
         hosts.append(dic)
     data = ''
