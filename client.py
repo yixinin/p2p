@@ -30,7 +30,7 @@ while True:
             continue
         _addr=(_ip,int(port))
         _data="hello p2p".encode(encoding="utf-8")
-
+        print(_data+_ip +":"+str(port))
         udpClient.sendto(_data, _addr)
     print(data.decode(encoding="utf-8"),'from',addr)
     print("done")
