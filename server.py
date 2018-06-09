@@ -1,17 +1,17 @@
 from socket import *
 from time import ctime
 
-host = ''  # 监听所有的ip
-port = 13141  # 接口必须一致
+host = ''
+port = 9999
 bufsize = 1024
 addr = (host, port)
 
 udpServer = socket(AF_INET, SOCK_DGRAM)
-udpServer.bind(addr)  # 开始监听
+udpServer.bind(addr)
 hosts = []
 while True:
     print('Waiting for connection...')
-    data, addr = udpServer.recvfrom(bufsize)  # 接收数据和返回地址
+    data, addr = udpServer.recvfrom(bufsize)   
 
     host, port = addr
     data = data.decode(encoding='utf-8').upper()
